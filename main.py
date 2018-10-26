@@ -1,3 +1,6 @@
+import sys
+
+
 clients = 'pablo,ricardo,'
 #Crea un cliente, si el cliente ya existe regresa una excepcion
 def create_client(client_name):
@@ -29,6 +32,16 @@ def delete_client(client_name):
     else:
         print('Client is not in the list')
 
+#Funcion para buscar un cliente de la lista
+def search_client(client_name):
+    clients_list = clients.split(',')
+
+    for client in clients_list:
+        if client != client_name:
+            continue
+        else:
+            return True
+
 #añade una coma al final del nombre de cada cliente
 def _add_comma():
     global clients
@@ -42,10 +55,23 @@ def _print_welcome():
     print('[C] Create client')
     print('[D] Delete client')
     print('[U] Update client')
+    print('[S] Search client')
 
 #Obtiene el nombre del cliente
 def _get_client_name():
-    return input('What is the client name: ')
+    client_name = None
+
+    while not client_name:
+        client_name = input('What is the client name: ')
+
+        if client_name == 'exit':
+            client_name = None
+            break
+
+    if not client_name:
+        sys.exit()
+
+    return client_name
 
 
 if __name__ == '__main__':
@@ -57,7 +83,7 @@ if __name__ == '__main__':
 
 #Determina que accion tomará dependiendo del input, sino es opción válida regresa una excepción
     if command == 'C':
-        client_name = input('Type new client name: ')
+        client_name = _get_client_name()
         create_client(client_name)
         list_clients()
     elif command == 'D':
@@ -69,5 +95,13 @@ if __name__ == '__main__':
         updated_client_name = input('What is the updated client name: ')
         update_client(client_name, updated_client_name)
         list_clients()
+    elif command == 'S':
+        client_name = _get_client_name()
+        found = search_client(client_name)
+
+        if found:
+            print('Client is on the client\'s list')
+        else:
+            print('Client: {} is not in the client\'s list'.format(client_name))
     else:
         print('Invalid command')
