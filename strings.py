@@ -49,3 +49,12 @@ print(rand) #Should print a random list
 
 ordered_num = sorted(rand)
 print(ordered_num) #Should primt random list sorted
+
+
+#Dictionaries examples
+keys = ['a', 'b', 'c', 'd', 'e']
+
+vowels = dict.fromkeys(keys)
+
+print(vowels)   #Should print {'o': None, 'i': None, 'u': None, 'a': None, 'e': None}
+
