@@ -58,3 +58,8 @@ vowels = dict.fromkeys(keys)
 
 print(vowels)   #Should print {'o': None, 'i': None, 'u': None, 'a': None, 'e': None}
 
+#list comprehension examples
+lista_de_numeros = list(range(100))
+
+pares = [numero for numero in lista_de_numeros if numero % 2 == 0]
+print(pares)
