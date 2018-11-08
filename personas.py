@@ -3,7 +3,7 @@ class Person:
         self.name = name
         self.age = age
 
-        def say_hello(self):
+    def say_hello(self):
             print('Hola, mi nombre es {} y tengo {} años'.format(self.name, self.age))
 
 if __name__ == '__main__':
