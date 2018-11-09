@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on darwin)" generated="20181109 11:02:15.367">
+<suite id="s1" name="TC 001" source="/Users/gilberto.sanchez/code/practicas_python/robotframework/TC_001.robot">
+<test id="s1-t1" name="TC_001 Browser Start and Close">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181109 11:02:15.630" level="INFO">Opening browser 'Chrome' to base url 'https://www.salesforce.com/mx/form/signup/sales-cloud/freetrial-sales-essentials/'.</msg>
+<status status="PASS" starttime="20181109 11:02:15.630" endtime="20181109 11:02:22.067"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:UserFirstName</arg>
+<arg>Gilberto</arg>
+</arguments>
+<msg timestamp="20181109 11:02:22.068" level="INFO">Typing text 'Gilberto' into text field 'name:UserFirstName'.</msg>
+<status status="PASS" starttime="20181109 11:02:22.067" endtime="20181109 11:02:22.288"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:UserLastName</arg>
+<arg>Sanchez</arg>
+</arguments>
+<msg timestamp="20181109 11:02:22.288" level="INFO">Typing text 'Sanchez' into text field 'name:UserLastName'.</msg>
+<status status="PASS" starttime="20181109 11:02:22.288" endtime="20181109 11:02:22.425"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:UserTitle</arg>
+<arg>Manager</arg>
+</arguments>
+<msg timestamp="20181109 11:02:22.426" level="INFO">Typing text 'Manager' into text field 'name:UserTitle'.</msg>
+<status status="PASS" starttime="20181109 11:02:22.426" endtime="20181109 11:02:22.558"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:UserEmail</arg>
+<arg>gilberto@mail.com</arg>
+</arguments>
+<msg timestamp="20181109 11:02:22.558" level="INFO">Typing text 'gilberto@mail.com' into text field 'name:UserEmail'.</msg>
+<status status="PASS" starttime="20181109 11:02:22.558" endtime="20181109 11:02:22.790"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:UserPhone</arg>
+<arg>98656789</arg>
+</arguments>
+<msg timestamp="20181109 11:02:22.791" level="INFO">Typing text '98656789' into text field 'name:UserPhone'.</msg>
+<status status="PASS" starttime="20181109 11:02:22.790" endtime="20181109 11:02:22.930"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:CompanyName</arg>
+<arg>Salesforce</arg>
+</arguments>
+<msg timestamp="20181109 11:02:22.931" level="INFO">Typing text 'Salesforce' into text field 'name:CompanyName'.</msg>
+<status status="PASS" starttime="20181109 11:02:22.930" endtime="20181109 11:02:23.095"></status>
+</kw>
+<kw name="Select From List" library="Selenium2Library">
+<doc>*DEPRECATED in Selenium2Library 3.2.* Use `Select From List By Label/Value/Index` instead.</doc>
+<arguments>
+<arg>xpath://a[text()='Menos de 8 empleados']</arg>
+<arg>Menos de 8 empleados</arg>
+</arguments>
+<msg timestamp="20181109 11:02:23.095" level="WARN">Keyword 'Selenium2Library.Select From List' is deprecated. Use `Select From List By Label/Value/Index` instead.</msg>
+<msg timestamp="20181109 11:02:23.096" level="INFO">Selecting option(s) 'Menos de 8 empleados' from list 'xpath://a[text()='Menos de 8 empleados']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181109 11:02:23.627" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20181109 11:02:23.113" endtime="20181109 11:02:23.627"></status>
+</kw>
+<msg timestamp="20181109 11:02:23.632" level="FAIL">List with locator 'xpath://a[text()='Menos de 8 empleados']' not found.</msg>
+<status status="FAIL" starttime="20181109 11:02:23.095" endtime="20181109 11:02:23.632"></status>
+</kw>
+<status status="FAIL" starttime="20181109 11:02:15.629" endtime="20181109 11:02:23.633" critical="yes">List with locator 'xpath://a[text()='Menos de 8 empleados']' not found.</status>
+</test>
+<status status="FAIL" starttime="20181109 11:02:15.369" endtime="20181109 11:02:23.636"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="TC 001">TC 001</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20181109 11:02:23.095" level="WARN">Keyword 'Selenium2Library.Select From List' is deprecated. Use `Select From List By Label/Value/Index` instead.</msg>
+</errors>
+</robot>
