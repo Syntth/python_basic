@@ -12,10 +12,10 @@ TC_001 Browser Start and Close
     #Steps:
     Open Browser  ${URL}  ${Browser}
     #Maximize Browser Window Currently not working
-    Input Text  name:UserFirstName  Gilberto
-    Input Text  name:UserLastName   Sanchez
+    Input Text  name:UserFirstName  Fernando
+    Input Text  name:UserLastName   Dìaz
     Input Text  name:UserTitle  Manager
-    Input Text  name:UserEmail  gilberto@mail.com
+    Input Text  name:UserEmail  fer@mail.com
     Input Text  name:UserPhone  98656789
     Input Text  name:CompanyName  Salesforce
     Select From List  xpath://a[text()='Menos de 8 empleados']  Menos de 8 empleados
