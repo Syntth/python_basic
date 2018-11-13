@@ -18,9 +18,10 @@ TC_001 Browser Start and Close
     Input Text  name:UserEmail  fer@mail.com
     Input Text  name:UserPhone  98656789
     Input Text  name:CompanyName  Salesforce
-    Select From List  xpath://a[text()='Menos de 8 empleados']  Menos de 8 empleados
+    #Select From List  xpath://a[text()='empleados']  Menos de 8 empleados
 #    Clear ELement Text  name:fld_username
 #    Select Radio Button  add_type  office
 #    Select Checkbox  name: terms
-#    Click Link  xpath://a[text()='Read Detail']
-    #Close Browser
+    Click Link  xpath:(//span[@class='selectBox-arrow'])[1]
+    #xpath://a[text()='Read Detail']
+    Close Browser
